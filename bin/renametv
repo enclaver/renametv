@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'optparse'
+require 'renametv'
+
+options = {}
+
+OptionParser.new do |opts|
+  opts.banner = 'Usage: renametv [options]'
+
+  opts.on_tail '--version', 'Show version' do
+    puts "renametv v#{Renametv::VERSION}"
+    exit
+  end
+
+  opts.on_tail '--dry-run', 'Do not rename anything. Just list' do
+    options[:dry_run] = true
+  end
+end.parse!
+
+Renametv.call(options)

@@ -1,0 +1,23 @@
+AllCops:
+  TargetRubyVersion: 2.7
+  NewCops: enable
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/AbcSize:
+  Max: 50
+
+Metrics/MethodLength:
+  Max: 32
+
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: single_quotes
+
+Style/StringLiteralsInInterpolation:
+  Enabled: true
+  EnforcedStyle: double_quotes
