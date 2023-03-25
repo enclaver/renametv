@@ -43,8 +43,8 @@ module Renametv
       return unless match
 
       @season_and_episode ||= {
-        season: match.values_at(1),
-        episode: match.values_at(2)
+        season: match.values_at(1).first,
+        episode: match.values_at(2).first
       }
     end
 
