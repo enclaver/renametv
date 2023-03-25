@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    renametv (0.1.0)
+    renametv (0.1.1)
 
 GEM
   remote: https://rubygems.org/
