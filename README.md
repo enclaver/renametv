@@ -1,12 +1,33 @@
 # Renametv
 
+Renametv is an executable that renames all files in the working directory that match a pattern for being a tv show file (`s01e02`)
+This will make your directory slightly prettier, but more importantly, it will make your subtitle files match the show file names, so most player will autoload the subtitle file.
+
+For example:
+```
+That.Tv.Show.S01E02.The.Best.Episode.mkv -> that_tv_show_s01e02.mkv
+that tv show s01e02 the best episode.srt -> that_tv_show_so1e02.srt
+```
+
+Obviously, the nature of this gem (renaming files in your file system) makes it very dangerous. And at this point, it is not really tested. So, I advise you run it in a sandbox. Or real the source first, it's not big. In the future, I will test it significantly more, as I use it.
+
 ## Installation
 
     $ gem install renametv
 
+This should add `renametv` to your PATH as well.
+
 ## Usage
 
-TODO: Write usage instructions here
+Change the working directory to the one containing the files you want renamed
+
+    $ renametv --dry-run
+
+To see all the renames that will happen
+
+    $ renametv
+
+To actually rename the files
 
 ## Development
 
@@ -16,7 +37,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/renametv. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/enclaver/renametv/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/enclaver/renametv. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/enclaver/renametv/blob/master/CODE_OF_CONDUCT.md).
 
 ## Code of Conduct
 
